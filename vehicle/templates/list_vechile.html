@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles List</title>
+    <link rel="stylesheet" href="{% static 'list.css'%}">
+</head>
+<body>
+<h1>List of Vehicles</h1>
+<a href="{%url 'create'%}">add vehicles</a>
+<table class="center">
+    {% for x in vehicle %}
+    <tr>
+        <th>NUMBER</th>
+        <th>TYPE</th>
+        <th>MODEL</th>
+        <th>DESCRIPTION</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+    </tr>
+    <tr>
+        <td>{{x.vehicle_number}}</td>
+        <td>{{x.vehicle_type}}</td>
+        <td>{{x.vehicle_model}}</td>
+        <td>{{x.vehicle_description}}</td>
+        <td><a href="{% url 'update' x.id %}">update</a></td>
+        <td><a href="{% url 'delete' x.id %}">delete</a></td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+</body>
+</html>
