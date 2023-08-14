@@ -3,14 +3,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vehicles List</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'list.css'%}">
+    <title>Vehicles List</title>
 </head>
 <body>
+<div class="container">
 <h1>List of Vehicles</h1>
 <a href="{%url 'create'%}">add vehicles</a>
 <table class="center">
-    {% for x in vehicle %}
+
     <tr>
         <th>NUMBER</th>
         <th>TYPE</th>
@@ -19,17 +24,20 @@
         <th>UPDATE</th>
         <th>DELETE</th>
     </tr>
+     {% for x in vehicle %}
     <tr>
         <td>{{x.vehicle_number}}</td>
         <td>{{x.vehicle_type}}</td>
         <td>{{x.vehicle_model}}</td>
         <td>{{x.vehicle_description}}</td>
-        <td><a href="{% url 'update' x.id %}">update</a></td>
-        <td><a href="{% url 'delete' x.id %}">delete</a></td>
+        <td><a href="{% url 'update' x.id %}"><i class="fa fa-edit"></i></a></td>
+        <td><a href="{% url 'delete' x.id %}"><i class="fa fa-trash"></i></a></td>
 
     </tr>
 
     {% endfor %}
 </table>
+    <a href="{% url 'logout' %}">Logout</a>
+  </div>
 </body>
 </html>

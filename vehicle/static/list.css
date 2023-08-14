@@ -1,8 +1,32 @@
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+.container{
+margin:30px;
+}
+.container h1{
+text-align:center;
+}
+
 table{
 margin:30px;
- border-collapse: collapse;
+border-collapse: collapse;
+
 }
 table td,th{
 border:1px solid #000000;
-
+padding:10px;
+}
+.container a{
+background-color: #008CBA;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
 }

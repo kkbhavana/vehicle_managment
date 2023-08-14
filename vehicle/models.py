@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -10,10 +11,11 @@ class Types(models.Model):
 
 
 class Vehicles(models.Model):
-    vehicle_number = models.CharField(max_length=10)
+    vehicle_number = models.CharField(max_length=15)
     vehicle_type = models.ForeignKey(Types, related_name='vehicle', on_delete=models.CASCADE)
     vehicle_model = models.CharField(max_length=100)
     vehicle_description = models.TextField()
 
     def __str__(self):
         return self.vehicle_number
+
