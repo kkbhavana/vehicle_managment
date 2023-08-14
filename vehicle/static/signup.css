@@ -5,7 +5,7 @@ align-items:center;
 }
 .container{
 border:1px solid #000000;
-margin:30px;
+margin:40px;
 }
 .container h1{
 text-align:center;
@@ -13,6 +13,20 @@ text-align:center;
 form{
 padding:30px;
 }
+.container ul li{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+margin-bottom:15px;
+}
+.container ul li input{
+background-color:#e1f2f7;
+border:none;
+padding:7px;
+font-size:16px;
+margin-left:10px;
+}
+
 .container .button{
 background-color: #008CBA;
 border: none;
@@ -23,4 +37,7 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 
+}
+.container p{
+text-align: center;
 }

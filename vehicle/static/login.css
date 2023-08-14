@@ -5,14 +5,13 @@ align-items:center;
 }
 .container{
 border:1px solid #000000;
-margin:30px;
+margin:120px;
+padding:30px
 }
 .container h1{
 text-align:center;
 }
-form{
-padding:30px;
-}
+
 .container .button{
 background-color: #008CBA;
 border: none;
@@ -23,4 +22,11 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 
+}
+.container input{
+background-color:#e1f2f7;
+border:none;
+padding:7px;
+font-size:16px;
+margin-bottom:10px;
 }
