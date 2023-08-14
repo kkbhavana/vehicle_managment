@@ -18,4 +18,3 @@ class Vehicles(models.Model):
 
     def __str__(self):
         return self.vehicle_number
-

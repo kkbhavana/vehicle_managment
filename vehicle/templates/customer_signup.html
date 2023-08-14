@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Signup</title>
+</head>
+<body>
+<div class="container">
+    <h1>Customer Signup</h1>
+    <form method="post">
+        {% csrf_token%}
+        <ul>
+            <li><label>{{form.username.label}}</label>
+                {{form.username}}
+            </li>
+            <li><label>{{form.email.label}}</label>
+                {{form.email}}
+            </li>
+            <li><label>{{form.password1.label}}</label>
+                {{form.password1}}
+            </li>
+
+            <li><label>{{form.password2.label}}</label>
+                {{form.password2}}
+            </li>
+        </ul>
+        <input class="button" type="submit" value="Register">
+
+    </form>
+    <p>Already have an account?<a href="{% url 'customer_login'%}">Login</a></p>
+</div>
+</body>
+</html>

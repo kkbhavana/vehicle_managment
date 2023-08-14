@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <h1>List of Vehicles</h1>
-    <a href="{%url 'create'%}">add vehicles</a>
+
     <table class="center">
 
         <tr>
@@ -22,8 +22,8 @@
             <th>TYPE</th>
             <th>MODEL</th>
             <th>DESCRIPTION</th>
-            <th>UPDATE</th>
-            <th>DELETE</th>
+
+
         </tr>
         {% for x in vehicle %}
         <tr>
@@ -31,14 +31,12 @@
             <td>{{x.vehicle_type}}</td>
             <td>{{x.vehicle_model}}</td>
             <td>{{x.vehicle_description}}</td>
-            <td><a href="{% url 'update' x.id %}"><i class="fa fa-edit"></i></a></td>
-            <td><a href="{% url 'delete' x.id %}"><i class="fa fa-trash"></i></a></td>
+
 
         </tr>
 
         {% endfor %}
     </table>
-    <a href="{% url 'logout' %}">Logout</a>
 </div>
 </body>
 </html>

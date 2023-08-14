@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+    <title>Home</title>
+</head>
+<body>
+<div class="container">
+    <h1>VEHICLE MAMAGEMENT SYESTM</h1>
+    <a href="{%url 'super_signup'%}">Super Admin</a><br>
+    <a href="{%url 'admin_signup'%}">Admin</a><br>
+    <a href="{%url 'customer_signup'%}">Customer</a>
+
+</div>
+</body>
+</html>
